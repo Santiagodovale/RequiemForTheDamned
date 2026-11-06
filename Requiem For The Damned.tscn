@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bigfnyfagaqv8"]
+
+[ext_resource type="Script" uid="uid://dvq1brwky25o6" path="res://heroi.gd" id="1_mox5l"]
+[ext_resource type="Texture2D" uid="uid://cwnbtx28xjy17" path="res://icon.svg" id="2_uh8sb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b52nb"]
+size = Vector2(160000, 19968)
+
+[node name="Node2D" type="Node2D" unique_id=312127170]
+position = Vector2(-4, 0)
+
+[node name="Heroi" type="CharacterBody2D" parent="." unique_id=25001387]
+position = Vector2(676, 275)
+script = ExtResource("1_mox5l")
+
+[node name="Icon" type="Sprite2D" parent="Heroi" unique_id=1419798191]
+position = Vector2(-2416, -2985)
+texture = ExtResource("2_uh8sb")
+
+[node name="Camera2D" type="Camera2D" parent="Heroi" unique_id=497108638]
+zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
+
+[node name="Chão" type="StaticBody2D" parent="." unique_id=2008705780]
+position = Vector2(576, 600)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão" unique_id=1506844397]
+position = Vector2(575, 605)
+shape = SubResource("RectangleShape2D_b52nb")
